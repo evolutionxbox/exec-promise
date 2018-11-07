@@ -26,13 +26,13 @@ const execp = cmd => new Promise((s,f) => exec(cmd, (e, o, _) => e ? f(e) : s(o)
 
 execp('git add test.js')
   .then(_ => {
-    log.notice('add')
+    log.notice('add', _)
     execp('git commit -m "test $(date +%F-%H%M%S)"')
       .then(_ => {
-        log.notice('commit')
+        log.notice('commit', _)
         execp('git status')
           .then(_ => {
-            log.notice('status')
+            log.notice('status', _)
           })
       })
   })
