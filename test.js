@@ -15,14 +15,14 @@ const execp = cmd => new Promise((s,f) => exec(cmd, (e, o, _) => e ? f(e) : s(o)
 //   })
 // })
 
-// sleep(200)
-//   .then(_ => {
-//     log.notice('200')
-//     sleep(300)
-//       .then(_ => {
-//         log.notice('300')
-//       })
-//   })
+sleep(200)
+  .then(_ => {
+    log.notice('200')
+    sleep(300)
+      .then(_ => {
+        log.notice('300')
+      })
+  })
 
 log.silly('prefix', 'message')
 log.verbose('prefix', 'message')
