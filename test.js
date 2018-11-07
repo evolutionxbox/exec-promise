@@ -24,6 +24,16 @@ const execp = cmd => new Promise((s,f) => exec(cmd, (e, o, _) => e ? f(e) : s(o)
 //       })
 //   })
 
+log.silly('prefix', 'message')
+log.verbose('prefix', 'message')
+log.info('prefix', 'message')
+log.timing('prefix', 'message')
+log.http('prefix', 'message')
+log.notice('prefix', 'message')
+log.warn('prefix', 'message')
+log.error('prefix', 'message')
+log.silent('prefix', 'message')
+
 execp('git add test.js')
   .then(_ => {
     log.notice('add', _)
