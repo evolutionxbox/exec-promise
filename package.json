@@ -1,0 +1,19 @@
+{
+  "name": "exec-promise-git",
+  "version": "1.0.0",
+  "description": "Testing Promisified Exec",
+  "main": "test.js",
+  "scripts": {
+    "postinstall": "npm audit fix && npm start",
+    "start": "nodemon node test.js"
+  },
+  "keywords": [
+    "exec",
+    "node"
+  ],
+  "author": "Jonathan Cousins <evolutionxbox@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "npmlog": "^4.1.2"
+  }
+}
